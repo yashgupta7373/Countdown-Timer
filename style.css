@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+  color: white;
+  min-width: 240px;
+  /* min-height: 320px; */
+}
+/* ---------- Box ---------- */
+.box {
+  /* background-image: url("images/bg5.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.inner-box {
+  background-color: rgba(0, 0, 0, 0.185);
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.count-down {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.input {
+  color: black;
+  background-color: white;
+  font-size: 25px;
+  font-weight: 600;
+  width: 70px;
+  height: 80px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px yellow;
+  text-shadow: 0 0 8px yellow;
+}
+.colon {
+  display: flex;
+  align-items: center;
+  text-shadow: 0 0 8px yellow;
+  font-size: 25px;
+}
+
+.action {
+  background-color: rgba(255, 255, 255, 0.76);
+  height: 50px;
+  width: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.action:hover {
+  background-color: white;
+  height: 55px;
+  width: 55px;
+  text-shadow: 0 0 8px yellow;
+  box-shadow: 0 0 10px yellow;
+}
+.date {
+  text-shadow: 0px 0px 10px red;
+  /* color: rgb(255, 255, 0); */
+  font-weight: bolder;
+}
+/* Set Time */
+.overlay {
+  /* background-color: aqua; */
+  backdrop-filter: blur(3px);
+  height: 100vh;
+  width: 100vw;
+  /* min-width: 400px; */
+  /* min-height: 320px; */
+  border-radius: 10px;
+  position: absolute;
+  top: -100vh;
+  /* top: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s;
+}
+.set-time {
+  background-color: rgba(255, 255, 255, 0.774);
+  color: black;
+  height: 70vh;
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px black;
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-filed {
+  /* background-color: blanchedalmond; */
+  margin-top: 20px;
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  font-weight: bold;
+}
+.box2 {
+  display: flex;
+}
+.input-filed span {
+  /* background-color: red; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.input-filed span input {
+  background-color: black;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+  margin: 5px 1px;
+  width: 90%;
+  min-width: 50px;
+  height: 80px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.input-filed p {
+  /* background-color: yellow; */
+  font-size: 40px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.background {
+  margin: 30px;
+}
+.background h4 {
+  text-align: center;
+}
+.bg-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.clr {
+  cursor: pointer;
+  height: 59px;
+  width: 59px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0px;
+}
+.bg-img {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  /* background-color: red; */
+  margin-right: 3px;
+  margin-top: 4px;
+  border: 1px solid gray;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Media Query */
+@media (max-width: 500px) {
+  .date {
+    font-size: 4.5vw;
+  }
+}
+@media (max-width: 560px) {
+  .set-time {
+    width: 90%;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .input-filed {
+    display: block;
+  }
+  .input-filed span input {
+    max-width: 98.8px;
+    width: 90%;
+    min-width: 50px;
+  }
+  .input-filed > p {
+    display: none;
+  }
+}
+.input-filed span input:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+.set-time button {
+  background-color: black;
+  color: white;
+  height: 35px;
+  width: 85px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+.set-time button:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}

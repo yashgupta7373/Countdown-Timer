@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Time</title>
+    <!-- ---------- CSS ---------- -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ---------- HTML ---------- -->
+
+    <!-- CountDown Watch -->
+    <div class="box">
+        <div class="inner-box">
+            <div class="date">
+                <span>Current Date & Time: </span>
+                <span id="current-date">00 00 0000 00:00</span>
+            </div>
+            <div class="date">
+                <span>End Date & Time: </span>
+                <span id="end-date">00 : 00 : 0000</span>
+            </div>
+            <div class="count-down">
+                <div>
+                    <span class="input">00</span>
+                    <span>Days</span>
+                </div>
+                <span class="colon">:</span>
+                <div>
+                    <span class="input">00</span>
+                    <span>Hours</span>
+                </div>
+                <span class="colon">:</span>
+                <div>
+                    <span class="input">00</span>
+                    <span>Minutes</span>
+                </div>
+                <span class="colon">:</span>
+                <div>
+                    <span class="input">00</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <div id="msg"></div>
+        </div>
+        <div class="action" onclick="action()">+</div>
+    </div>
+
+    <!-- Set End Date Form -->
+    <div class="overlay">
+        <div class="set-time">
+            <h1>Set End Time</h1>
+            <div class="input-filed">
+                <div class="box2">
+                    <span>
+                        <input type="number" id="input-date" min="1" max="31">Date
+                    </span>
+                    <p>:</p>
+                    <span>
+                        <input type="number" id="input-month" min="1" max="12">Month
+                    </span>
+                    <p>:</p>
+                    <span>
+                        <input type="number" id="input-year" min="2023" max="2050">Year
+                    </span>
+                </div>
+                <p>:</p>
+                <div class="box2">
+                    <span>
+                        <input type="number" id="input-hours" min="0" max="24">Hours
+                    </span>
+                    <p>:</p>
+                    <span>
+                        <input type="number" id="input-minutes" min="0" max="60">Minutes
+                    </span>
+                </div>
+            </div>
+            <div class="background">
+                <h4>Chose background</h4>
+                <div class="bg-box">
+                    <input class="clr" type="color" value="#ff0000" onclick="img=0">
+                    <div class="bg-img" style="background-image: url('images/bg1.jpg');" onclick="img='images/bg1.jpg'"></div>
+                    <div class="bg-img" style="background-image: url('images/bg2.jpg');" onclick="img='images/bg2.jpg'"></div>
+                    <div class="bg-img" style="background-image: url('images/bg3.jpg');" onclick="img='images/bg3.jpg'"></div>
+                    <div class="bg-img" style="background-image: url('images/bg4.jpg');" onclick="img='images/bg4.jpg'"></div>
+                    <div class="bg-img" style="background-image: url('images/bg5.jpg');" onclick="img='images/bg5.jpg'"></div>
+                </div>
+            </div>
+            <div class="msg-input">
+                <h4>Enter End Massage</h4>
+                <input type="text" id="end-msg">
+            </div>
+            <button onclick="done(img)">Done</button>
+        </div>
+    </div>
+    <!-- ---------- JavaScript ---------- -->
+    <script src="script.js"></script>
+</body>
+
+</html>
